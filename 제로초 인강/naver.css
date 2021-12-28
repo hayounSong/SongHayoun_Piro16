@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box
+}
+/* *은 모든 태그를 의미한다 */
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -22,6 +26,8 @@ width: 1080px;
     height: 48px;
     background-position: -1px -8px;
     background-repeat: no-repeat;
+    vertical-align: middle;
+    /* 세로 정렬임. */
     
 }
 
@@ -38,12 +44,20 @@ width: 1080px;
 #header-search fieldset{
     margin-left: 20px;
     width: 521px;
-    height: 48px;
+    height: 49px;
     display:inline-block;
     padding:12px 0 12px 10px;
     border: 2px solid #03cf5d;
+    box-sizing: border-box;
+    vertical-align: middle;
 }
 
 #header-search span{
     display: none;
+}
+
+#header-search fieldset input{
+    border:none;
+    padding:0;
+    outline:none;
 }
