@@ -28,7 +28,10 @@ width: 1080px;
     background-repeat: no-repeat;
     vertical-align: middle;
     /* 세로 정렬임. */
-    
+    position:relative;
+    top:-6px;
+    /* relative는 상대적인데, 현재 static 위치랑 비교  */
+    /* 현재위치를 기준으로 움직인다 */
 }
 
 /* #header-search  h1{
@@ -74,6 +77,10 @@ width: 1080px;
    position:absolute;
    right:-2px;
    top:-2px;
+   /* absolute는 화면 자체를 기반으로 움직인다. */
+   /* absolute면 부모들을 찾아서 컨테이닝 블럭이 있는데 까지 올라가서 */
+   /* 여기서 컨테이닝 블럭은 포지션이 스태틱이 아닌거 */
+   /* relative는 컨테이닝 블럭이 되는거다. */
     
 }
 
