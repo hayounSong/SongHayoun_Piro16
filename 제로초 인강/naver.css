@@ -1,4 +1,12 @@
-/* 선택자(selector) */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;/* 선택자(selector) */
+}
+/* id는 html에서 한번만 쓸 수있고, 클래스는 여러번 사용할 수 있다. */
 #header-center{
 margin:0 auto;
 width: 1080px;
