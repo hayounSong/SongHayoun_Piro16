@@ -15,7 +15,7 @@ body,html{
     overflow: hidden;/* 선택자(selector) */
 }
 /* id는 html에서 한번만 쓸 수있고, 클래스는 여러번 사용할 수 있다. */
-#header-center{
+.center-align{
 margin:0 auto;
 width: 1080px;
 }
@@ -100,15 +100,55 @@ width: 1080px;
     margin: 14px;
 }
 
-#fixed{
-    position: fixed;
-    top:50px;
-    right:50px;
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav li{
     display: inline-block;
-    width: 100px;
-    height:100px;
-
-
-
 }
 /* fixed의 경우 컨테이닝 블럭은 화면이나 페이지 영역 그자체다. */
+nav li span:first-child{
+    background-image:url(./sp_nav.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height:16px;   
+}
+
+nav li:first-child span:first-child{
+    width:25px;
+    
+    background-position: 0 -285px;
+}
+nav li:nth-child(2) span:first-child{
+    
+    width:27px;
+    background-position: -279px -52px;
+    
+}
+nav li:nth-child(3) span:first-child{
+    
+    width:40px;
+    background-position: -279px -52px;
+     
+}
+nav li:nth-child(4) span:first-child{
+    
+    width:40px;
+    background-position: -279px -52px;
+     
+}
+nav li:nth-child(5) span:first-child{
+    
+    width:40px;
+    background-position: -279px -52px;
+     
+}
+nav li:nth-child(6) span:first-child{
+    
+    width:40px;
+    background-position: -279px -52px;
+     
+}
