@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box
 }
+body,html{
+    margin:0;
+    padding:0;
+}
 /* *은 모든 태그를 의미한다 */
 .blind {
     position: absolute;
@@ -79,8 +83,9 @@ width: 1080px;
    top:-2px;
    /* absolute는 화면 자체를 기반으로 움직인다. */
    /* absolute면 부모들을 찾아서 컨테이닝 블럭이 있는데 까지 올라가서 */
-   /* 여기서 컨테이닝 블럭은 포지션이 스태틱이 아닌거 */
+   /* 여기서 컨테이닝 블럭은 포지션이 스태틱이나 relative */
    /* relative는 컨테이닝 블럭이 되는거다. */
+   /* display가 inline이면 컨테이닝 블럭이 될 수 없다. */
     
 }
 
@@ -95,3 +100,15 @@ width: 1080px;
     margin: 14px;
 }
 
+#fixed{
+    position: fixed;
+    top:50px;
+    right:50px;
+    display: inline-block;
+    width: 100px;
+    height:100px;
+
+
+
+}
+/* fixed의 경우 컨테이닝 블럭은 화면이나 페이지 영역 그자체다. */
