@@ -329,6 +329,7 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: inline-block;
 }
 
 #main-newsstand li {
@@ -380,7 +381,7 @@ main {
     background: white;
     margin-bottom: 8px;
     width: 332px;
-    height: 837px;
+    height: 882px;
     float: left;
 }
 /* 기본으로 지정해주는 태그의 margin 같은거는 브라우저마다 값이 다름. */
