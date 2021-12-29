@@ -6,6 +6,26 @@ body,html{
     padding:0;
 }
 /* *은 모든 태그를 의미한다 */
+.opacity {
+    opacity: 0.5;
+    background: white;
+}
+
+.opacity.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 45px;
+    width: 15px;
+}
+
+.opacity.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 45px;
+    width: 15px;
+}
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -467,7 +487,37 @@ iframe{
     background-image: url(./sp_themecast.png);
     background-repeat: no-repeat;
     background-position: -320px 0;
+}#subject-list, #subject-all, #subject-prev, #subject-next {
+    float: left;
+    height: 45px;
+    padding: 0;
 }
+
+#subject-list {
+    width: 603px;
+    position: relative;
+}
+
+#subject-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 45px;
+    width: 700px;
+}
+
+#subject-list li {
+    float: left;
+    margin-right: 10px;
+    padding: 14px 7px 0;
+    font-size: 14px;
+    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+}
+
+
+
 
 #subject-next span:last-child {
     position: absolute;
