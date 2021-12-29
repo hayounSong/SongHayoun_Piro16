@@ -417,7 +417,9 @@ main {
     border:1px solid black;
     border-radius: 50px;
 }
-
+#subject-prev{
+    display: inline-block;
+}
 iframe{
     width:500px;
     height:900px;
