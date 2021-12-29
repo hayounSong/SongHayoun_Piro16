@@ -367,6 +367,7 @@ main {
     background: white;
     margin-bottom: 8px;
     margin-right: 8px;
+    float: left;
 }
 
 #main-shopping {
@@ -374,6 +375,7 @@ main {
     margin-bottom: 8px;
     width: 332px;
     height: 837px;
+    float: left;
 }
 /* 기본으로 지정해주는 태그의 margin 같은거는 브라우저마다 값이 다름. */
 #main-third-block, #main-fourth-block {
@@ -382,12 +384,14 @@ main {
 }
 
 #main-event {
-    
+
     width: 740px;
     height: 130px;
     background: white;
     vertical-align: top;
     margin-right: 8px;
+    float:left;
+
 }
 /* 내부보다 외부를 먼저해라 */
 #main-third-ad {
@@ -395,4 +399,14 @@ main {
     width: 332px;
     height: 130px;
     background: #555;
+}
+#fixed{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: inline-block;
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    border-radius: 50px;
 }
