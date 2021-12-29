@@ -110,45 +110,43 @@ nav li{
     display: inline-block;
 }
 /* fixed의 경우 컨테이닝 블럭은 화면이나 페이지 영역 그자체다. */
-nav li span:first-child{
-    background-image:url(./sp_nav.png);
-    background-repeat: no-repeat;
-    display: inline-block;
-    height:16px;   
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0;
 }
 
-nav li:first-child span:first-child{
-    width:25px;
-    
-    background-position: 0 -285px;
-}
-nav li:nth-child(2) span:first-child{
-    
-    width:27px;
-    background-position: -279px -52px;
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    margin-left: 14px;
+    /* !important; 이거 있으면 그냥 우선 순위를 제일 위로 올려줌 */
+    background-image: url(sp_nav.png);
+    background-repeat: no-repeat;
     
 }
-nav li:nth-child(3) span:first-child{
-    
-    width:40px;
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
     background-position: -279px -52px;
-     
 }
-nav li:nth-child(4) span:first-child{
-    
-    width:40px;
-    background-position: -279px -52px;
-     
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
 }
-nav li:nth-child(5) span:first-child{
-    
-    width:40px;
-    background-position: -279px -52px;
-     
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
 }
-nav li:nth-child(6) span:first-child{
-    
-    width:40px;
-    background-position: -279px -52px;
-     
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
 }
