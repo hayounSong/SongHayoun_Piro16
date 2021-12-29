@@ -428,3 +428,58 @@ iframe{
     bottom:350px;
     /* 크기맞출려고 따로작성 */
 }
+#subject-list li.highlight {
+    border-bottom: 3px solid #00c73c;
+    color: #00b336;
+    font-weight: 700;
+    height: 45px;
+}
+
+#subject-all {
+    border-right: 1px solid #ebeef3;
+}
+
+#subject-all, #subject-prev, #subject-next {
+    position: relative;
+    width: 45px;
+    border: none;
+    border-left: 1px solid #ebeef3;
+    background: white;
+}
+
+#subject-all span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 20px;
+    height: 14px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -218px -257px;
+}
+
+#subject-prev span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px 0;
+}
+
+#subject-next span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px -52px;
+}
+
+section {
+    border: 1px solid #dee3eb;
+}
