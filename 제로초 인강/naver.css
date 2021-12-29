@@ -14,6 +14,9 @@ body,html{
     margin: -1px;
     overflow: hidden;/* 선택자(selector) */
 }
+.relative{
+    position: relative;
+}
 /* id는 html에서 한번만 쓸 수있고, 클래스는 여러번 사용할 수 있다. */
 .center-align{
 margin:0 auto;
@@ -21,10 +24,12 @@ width: 1080px;
 }
 
 /* div가 아닌애들은 # 앞에 태그이름이 생략이 안된다! */
-
+header{
+    height:170px;
+}
 #header-top{
     float:right;
-
+    margin-top: 8px;
 }
 #header-top span{
     color:#888;
@@ -37,6 +42,7 @@ width: 1080px;
 }
 #header-search{
     clear:both;
+    margin-top:20px;
 }
 #header-search h1{
 
@@ -53,19 +59,29 @@ width: 1080px;
     /* relative는 상대적인데, 현재 static 위치랑 비교  */
     /* 현재위치를 기준으로 움직인다 */
 }
+#header-search h1 span{
+    display:none;
+}
 
-/* #header-search  h1{
-    width:280px;
-    자손선택자
-} */
+#header-search h2{
+    display:none;
+}
 
 #header-search h2{
 
     display:none;
+
+}
+
+nav{
+
+    eight: 46px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #d1d8e4;
 }
 
 #header-search fieldset{
-    margin-left: 20px;
+    margin-left: 18px;
     width: 521px;
     height: 49px;
     display:inline-block;
@@ -118,8 +134,10 @@ width: 1080px;
 
 nav ul{
     margin:0;
-    padding:0;
+    padding:16px 0 0 4px;
     list-style:none;
+    
+    display:inline-block;
 }
 
 nav li{
@@ -165,4 +183,32 @@ nav li:nth-child(5) span:first-child {
 nav li:nth-child(6) span:first-child {
     width: 25px;
     background-position: -70px -285px;
+}
+.nav-divider{
+    display:inline-block;
+    margin: 18px 16px 0;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+}
+
+#search-ranking {
+    position: absolute;
+    top: 16px;
+    right: 100px;
+}
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
+#rank-title {
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+main {
+    background-color: #f2f4f7;
 }
