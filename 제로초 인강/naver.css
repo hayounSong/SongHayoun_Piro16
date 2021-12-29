@@ -271,6 +271,7 @@ nav li.more:first-child span:first-child {
     background: #ebeef3;
 }
 
+/* 마진은 sibling일때 상쇄가능 */
 #search-ranking {
     position: absolute;
     top: 16px;
@@ -292,4 +293,106 @@ main {
     background-color: #f2f4f7;
     display: inline-block;
     width:100%;
+}
+
+#main-ytn {
+    display: inline-block;
+    width: 740px;
+    height: 46px;
+    background-color: white;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+#main-ytn h3,
+#main-ytn ol {
+    display: inline-block;
+}
+
+#main-newsstand {
+    display: inline-block;
+    width: 740px;
+    height: 246px;
+    background-color: white;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+#main-newsstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#main-newsstand ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-newsstand li {
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center;
+}
+
+#main-newsstand li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main-weather {
+    display: inline-block;
+    width: 332px;
+    height: 142px;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+#main-second-ad {
+    display: inline-block;
+    width: 332px;
+    height: 150px;
+    background: #555;
+    margin-bottom: 8px;
+}
+
+#main-category {
+    
+    width: 740px;
+    height: 837px;
+    background: white;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+#main-shopping {
+    background: white;
+    margin-bottom: 8px;
+    width: 332px;
+    height: 837px;
+}
+/* 기본으로 지정해주는 태그의 margin 같은거는 브라우저마다 값이 다름. */
+#main-third-block, #main-fourth-block {
+    display: inline-block;
+    width: 100%;
+}
+
+#main-event {
+    
+    width: 740px;
+    height: 130px;
+    background: white;
+    vertical-align: top;
+    margin-right: 8px;
+}
+/* 내부보다 외부를 먼저해라 */
+#main-third-ad {
+    
+    width: 332px;
+    height: 130px;
+    background: #555;
 }
