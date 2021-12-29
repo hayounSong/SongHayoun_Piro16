@@ -262,6 +262,7 @@ nav li.more:first-child span:first-child {
     background-position: 0 -104px;
 }
 
+
 .nav-divider{
     display:inline-block;
     margin: 18px 16px 0;
@@ -289,4 +290,6 @@ nav li.more:first-child span:first-child {
 
 main {
     background-color: #f2f4f7;
+    display: inline-block;
+    width:100%;
 }
