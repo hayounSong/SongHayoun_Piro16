@@ -276,8 +276,8 @@ nav li.more:first-child span:first-child {
 /* 마진은 sibling일때 상쇄가능 */
 #search-ranking {
     position: absolute;
-    top: 16px;
-    right: 100px;
+    top: 14px;
+    right: 0;
 }
 
 #rank-number {
