@@ -1,0 +1,143 @@
+section{
+
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    margin-top:50px;
+    border:2px solid aqua;
+    width:700px;
+    margin-left: 600px;
+    border-radius: 50px;
+}
+
+body{
+
+   
+}
+
+html{
+    height:100%
+}
+
+.titletext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    color:aqua;
+    font-weight: bolder;
+    padding-top:20px;
+
+}
+.titletext::after{
+    content: "";
+    display: block;
+    width: 80%;
+    border-bottom: 2.5px solid gray;
+    margin: 20px 0px;
+}
+
+.plusarea{
+    display: flex;
+    justify-content: center;
+}
+.plusarea input{
+    width:400px;
+    height:30px;
+    border:2px solid black;
+    border-radius: 5px;
+    margin-right:30px;
+}
+.plus{
+    background-color: white;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    color:aqua;
+    width:100px;
+    font-size: 20px;
+}
+.listarea div{
+    width:80%;
+
+}
+.buttonarea{
+    display: flex;
+    justify-content:space-around;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.buttonarea button{
+    background-color: aqua;
+    border: 2px solid white;
+    border-radius: 8px;
+    color:white;
+    width:130px;
+    font-size: 15px;
+    height:50px;
+    font-weight: bolder;
+}
+.listarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+    ;
+}
+.listarea i{
+    font-size: 40px;
+    color:white;
+    border:2px solid aqua;
+    background-color: aqua;
+    width:100px;
+    text-align: center;;
+}
+
+.index{
+    display:flex;
+    margin-top:30px;
+
+}
+.indextext{
+    border:2px solid aqua;;
+    width:1900px !important;
+    text-align: center;
+    background-color: aqua;
+    color:white;
+    font-size: 25px;
+    font-weight:bolder;
+}
+.icon{
+    border:2px solid aqua;
+    width:20px;
+
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    
+}
+.list input{ 
+    color:white;
+    border:2px solid aqua;
+    background-color: aqua;
+    width:43px;
+    text-align: center;;
+    zoom:2.5;
+}
+
+.list span{
+    border:2px solid aqua;;
+    width: 100%!important;
+    text-align: center;
+    background-color: white;
+    color:aqua;
+    font-size: 25px;
+    font-weight:bolder;
+    display: inline-block;
+    
+}
+.list div{
+    display:flex;
+    width:100%;
+}
