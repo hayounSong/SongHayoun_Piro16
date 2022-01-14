@@ -11,7 +11,7 @@ def movie_list(request):
 
 def movie_create(request):
     if request.method=="POST":
-        form=PostForm(request.POST)
+        form=PostForm(request.POST,request.FILES)
         if form.is_valid():
             post=form.save()
             return redirect('reviews:review')
@@ -29,8 +29,9 @@ def movie_detail(request,pk):
 def movie_update(request,pk):
     post=get_object_or_404(Post,id=pk)
     if request.method=="POST":
-        form=PostForm(request.POST,instance=post)
+        form=PostForm(request.POST,request.FILES,instance=post)
         if form.is_valid():
+            post.photo=form.cleaned_data['image']
             post=form.save()
             return redirect('reviews:detail',pk)
     else:

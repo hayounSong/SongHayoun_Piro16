@@ -13,7 +13,7 @@
     <span>장르:{{post.genre}}</span>
     <span>별점:{{post.star}}</span>
         {% if post.photo %}
-            <img src = "{{ post.photo.url }}" alt="" height="600">
+            <img src = "{{ post.photo.url }}" alt="{{post.photo}}" height="600">
             <br>
         {% endif %}
     {%endfor%}

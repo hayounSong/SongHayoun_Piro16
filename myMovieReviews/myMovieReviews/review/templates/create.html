@@ -7,10 +7,12 @@
     <title>영화 리뷰 작성</title>
 </head>
 <body>
-    <form action"" method="POST">
+    <form action"" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
             {{form.as_table}}
+            
+             
 
         </table>
         <input type="submit" value="등록하기">

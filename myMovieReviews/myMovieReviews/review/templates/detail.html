@@ -8,10 +8,10 @@
 </head>
 <body>
     <h2>제목:{{post.title}}</h2>
-    {% if post.photo %}
-            <img src = "{{ post.photo.url }}" alt="" height="600">
-            <br>
-        {% endif %}
+    
+    <img src = "{{ post.photo.url }}" alt="{{post.photo}}" height="600">
+    <br>
+        
     <p>감독:{{post.director}}</p>
     <p>주연 배우:{{post.main}}</p>
     <p>장르:{{post.genre}}</p>
