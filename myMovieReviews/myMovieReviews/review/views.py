@@ -31,7 +31,7 @@ def movie_update(request,pk):
     if request.method=="POST":
         form=PostForm(request.POST,request.FILES,instance=post)
         if form.is_valid():
-            post.photo=form.cleaned_data['image']
+            
             post=form.save()
             return redirect('reviews:detail',pk)
     else:

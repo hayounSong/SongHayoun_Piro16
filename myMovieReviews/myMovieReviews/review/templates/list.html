@@ -1,23 +1,101 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/cyborg/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영화 리스트</title>
+    
+    
+   
 </head>
-<body>
-   {% for post in posts %}
-    <h2><a href="{% url 'reviews:detail' post.id%}">제목:{{post.title}}</a></h2><br>
-    <span>개봉년도:{{post.year}}</span>
-    <span>장르:{{post.genre}}</span>
-    <span>별점:{{post.star}}</span>
-        {% if post.photo %}
-            <img src = "{{ post.photo.url }}" alt="{{post.photo}}" height="600">
-            <br>
+<div>
+    <div>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" style="font-size: 40px!important; margin-left: 60px;color:rgb(229,9,20);">PiroFLix</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link"style="font-size:20px!important; margin-left:40px;" aria-current="page" href="#">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"style="color:white;font-size:20px!important; margin-left:10px;" aria-current="page" href="#">시리즈</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"style="color:white;font-size:20px!important; margin-left:10px;" aria-current="page" href="#">영화</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"style="color:white;font-size:20px!important; margin-left:10px;" aria-current="page" href="#">NEW!요즘 대세 콘텐츠</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"style="color:white;font-size:20px!important; margin-left:10px;" aria-current="page" href="#">내가 찜한 콘텐츠</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"style="color:white;font-size:20px!important; margin-left:10px;" aria-current="page" href="#">음성 및 자막</a>
+                  </li>
+                
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+    </div>
+        <div class="container" style="margin-top:100px;max-width: 100%;">
+            <div class="row" style="max-width: 100%;margin-left: 100px;">
+                <div class="col-md-10"><span style="font-size:40px!important;font-weight: bold;">영화 리뷰</span></div>
+                
+                <div class="col-md-offset-6 col-md-2 col-lg-offset-5">
+                    <a href="{% url 'reviews:create' %}"><button type="button" class="btn btn-outline-dark btn-lg"><span style="color:white;">리뷰 작성</span></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="content1">
+        {% for post in posts %}
+    <div class="card mb-3" style="width:30%;text-align: center;margin-top:30px;margin-left: 30px;;">
+  <h3 class="card-header" style="font-size: 30px!important;font-weight: bold;"><a href="{% url 'reviews:detail' post.id%}">{{post.title}}</a></h3>
+  <div class="card-body">
+    <h5 class="card-title">당신에게 딱 맞는 {{post.genre}} 장르의 영화 </h5>
+    <h6 class="card-subtitle text-muted">제목이나 이미지를 클릭시 상세보기가 가능합니다</h6>
+  </div>
+  {% if post.photo %}
+        <a href="{% url 'reviews:detail' post.id%}">
+            <img src = "{{ post.photo.url }}" alt="{{post.photo}}" width="400" height="600">
+            <p></p>
+        </a>
         {% endif %}
-    {%endfor%}
+    <rect width="100%" height="100%" fill="#868e96"></rect>
+    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">이 영화의 개봉연도: {{post.year}}</text>
+  </svg>
+  <div class="card-body">
+    <p class="card-text">{{post.star}} 주연 작품</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{post.director}} 감독 제작</li>
+    <li class="list-group-item">{{post.star}} 별점의 작품</li>
+    <li class="list-group-item">{{post.time}}의 러닝타임</li>
+  </ul>
+  
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
 
-    <button><a href="/review/create">리뷰 작성</a></button>
+{%endfor%}
+</div>
+    
+    
+    
 </body>
 </html>
