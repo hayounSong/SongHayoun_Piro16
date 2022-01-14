@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 리스트</title>
+</head>
+<body>
+   {% for post in posts %}
+    <h2><a href="{% url 'reviews:detail' post.id%}">제목:{{post.title}}</a></h2><br>
+    <span>개봉년도:{{post.year}}</span>
+    <span>장르:{{post.genre}}</span>
+    <span>별점:{{post.star}}</span>
+        {% if post.photo %}
+            <img src = "{{ post.photo.url }}" alt="" height="600">
+            <br>
+        {% endif %}
+    {%endfor%}
+
+    <button><a href="/review/create">리뷰 작성</a></button>
+</body>
+</html>

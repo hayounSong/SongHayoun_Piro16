@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 상세 정보</title>
+</head>
+<body>
+    <h2>제목:{{post.title}}</h2>
+    {% if post.photo %}
+            <img src = "{{ post.photo.url }}" alt="" height="600">
+            <br>
+        {% endif %}
+    <p>감독:{{post.director}}</p>
+    <p>주연 배우:{{post.main}}</p>
+    <p>장르:{{post.genre}}</p>
+    <p>별점:{{post.star}}</p>
+    <p>러닝타임:{{post.time}}</p>
+    <p>리뷰 내용:{{post.review}}</p>
+    <p><button><a href="{% url 'reviews:update' post.id%}">수정하기</a></button></p>
+    <p><button><a href="{% url 'reviews:delete' post.id%}">삭제하기</a></button></p>
+    <button><a href="/review">my Movie reviews</a></button>
+</body>
+</html>
