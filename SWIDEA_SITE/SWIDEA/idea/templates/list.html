@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% for post in posts %}
+<div class="card mb-3" >
+    <h3 class="card-header"><a href="{% url 'Idea:detail' post.id %}">{{post.title}}</a></h3>
+    
+    <img src="{{post.image.url}}"xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="500" height="400" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+      
+    </img>
+    
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">예상 개발툴:{{post.devtool}}</li>
+      <li class="list-group-item">
+          <button onclick="onclickLike({{post.id}},'plus')">+</button>
+         <span>관심도:{{post.like}}</span>
+         <button onclick="onclickLike({{post.id}},'minus')">-</button>
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+    
+{% endfor %}
+
+
+{% endblock %}
+
+{% block extra %} 
+
+<script>
+
+  const requestbutton = new XMLHttpRequest();
+
+  const onclickLike=(id,type)=>{
+    const url="/button_ajax/";
+    requestbutton.open("POST",url,true);
+    requestbutton.setRequestHeader(
+      "Content-Type",
+      "application/x-www-form-urlencoded"
+    );
+    requestbutton.send(JSON.stringify({id:id,type:type}));  };
+
+    const ButtonResponse= () =>{
+      if(requestbutton.status<400){
+        const {id,type}=JSON.parse(requestbutton.response);
+        const element=document.querySelector(`.post-id-${id} .post_${type}`);
+        const originHTML = element.innerHTML;
+        const [buttonType,num] = originHTML.split(' ');
+        const count=Number(num)+1;
+
+        element.innerHTML= `${buttonType} ${count}`;
+
+      }
+    };
+    requestbutton.onreadystatechange=()=>{
+      if(requestbutton.readyState===XMLHttpRequest.DONE){
+      ButtonResponse();}
+    }
+  ;
+</script>
+
+{% endblock %}

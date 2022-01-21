@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIDEA</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css" integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
+   
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'Idea:list' %}">MY SW IDEA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'Idea:create' %}">아이디어 등록
+                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">아이디어 관리</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'Idea:dev_create' %}">개발툴 등록</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'Idea:dev_list' %}">개발툴 관리</a>
+              </li>
+              
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    {% block content %}
+        <!-- 기본 내용 -->
+    {% endblock %}
+</form>
+    {% csrf_token %}
+    {% block extra %}
+    {% endblock %}
+</body>
+</html>
