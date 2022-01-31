@@ -2,7 +2,7 @@ import re
 from django.http import JsonResponse
 from django.shortcuts import render,get_object_or_404,redirect
 from .models import Idea,Devtool
-# from .forms import PostForm
+
 from .forms import DevForm, IdeaForm
 import json
 from django.http import JsonResponse
